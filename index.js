@@ -31,7 +31,9 @@ app.get('/',(req, res)=>{
 
 
 // initialize routes
-//app.use('/api',require('./routes/api'));
+app.use('/api',require('./routes/adminApi'));
+app.use('/api',require('./routes/customerApi'));
+app.use('/api',require('./routes/coursApi'));
 
 // listen for requests
 app.listen(process.env.PORT || 4000,()=>{

@@ -1,5 +1,5 @@
 const express = require('express');
-const { createAdmin,findAdmin } = require('../controllers/adminController');
+const { createAdmin,findAdmin } = require('../controllers/admin.Controller');
 const router = express.Router();
 
 

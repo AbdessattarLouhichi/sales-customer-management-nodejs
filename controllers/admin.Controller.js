@@ -5,7 +5,7 @@ exports.findAdmin = async (req,res)=>{
     const users = await User.find({})
      res.send(users)
     } catch (error) {
-        return res.staus(500).json({message : 'Error Server'})
+        return res.status(500).json({message : 'Error Server'})
     }
 }
 
@@ -18,6 +18,6 @@ exports.createAdmin =  async(req,res)=>{
         res.send(user);
     })
     } catch (error) {
-        return res.staus(500).json({message : 'Error Server'})
+        return res.status(500).json({message : 'Error Server'})
     }
 }
