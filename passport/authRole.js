@@ -1,5 +1,5 @@
 const User = require('../models/authentification');
-const authRole = (role)=>{
+module.exports = function authRole(role){
     return (req,res,next)=>{
         const user =  User.findById(req.params.id)
         if (user.role !==role) {
@@ -10,4 +10,3 @@ const authRole = (role)=>{
     }
 }
 
-module.exports = authRole;

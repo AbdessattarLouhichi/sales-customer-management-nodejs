@@ -5,7 +5,7 @@ const passport = require('passport');
 const authRole = require('./passport/authRole');
 
 // Get customer
-router.get('/customers',passport.authenticate('bearer', { session: false }),authRole("admin"), findCustomers)
+router.get('/customers',passport.authenticate('bearer', { session: false }),authRole(["admin"]), findCustomers)
 
 // create customer
  router.post('/Createcustomer',passport.authenticate('bearer', { session: false }),createCustomer)

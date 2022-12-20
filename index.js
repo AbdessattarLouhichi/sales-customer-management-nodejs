@@ -7,9 +7,10 @@ const cors = require('cors');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path');
+const authRole = require('./passport/authRole')
 const passport = require('passport');
 require('./passport/bearer');
-const authRole = require('./passport/authRole');
+
 
 
 
@@ -30,6 +31,10 @@ app.set('views',path.join('views'))
 app.get('/',(req, res)=>{
      res.status(200).render('index')
 }); 
+
+app.get('/dashboard',authRole(["admin"]),(req,res)=>{
+    res.send('Dashboard')
+})
 
 
 
