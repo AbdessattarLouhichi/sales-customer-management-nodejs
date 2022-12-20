@@ -15,7 +15,6 @@ module.exports = function sendEmail (customer,cours){
   
 //mail options
     let template;
-    console.log(customer,cours)
     ejs.renderFile('./templates/confirmEmail.ejs',{customer : customer.firstName, cours : `${cours.name } :  ${cours.description}`}, (err ,data)=>{
         if (err) {
             console.log(err)
@@ -31,7 +30,7 @@ module.exports = function sendEmail (customer,cours){
         html : template
     }
  //send mail with defined transport object
-    let info =  transporter.sendMail(mailOptions, (err,info)=> {
+    transporter.sendMail(mailOptions, (err,info)=> {
         if (err) {
         console.log(err)
         } else {

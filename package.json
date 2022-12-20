@@ -11,14 +11,18 @@
   "author": "Abdessattar Louhichi",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.8.0",
     "morgan": "^1.10.0",
     "nodemailer": "^6.8.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "passport": "^0.6.0",
+    "passport-http-bearer": "^1.0.1"
   }
 }

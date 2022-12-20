@@ -18,7 +18,8 @@ const authSchema = new mongoose.Schema({
     },
     role : {
         type : String,
-        require: [true, 'required!']
+        enum : ["admin", "user", "customer"],
+        default:"admin"
     }
 },{
     timestamps :true , versionKey : false

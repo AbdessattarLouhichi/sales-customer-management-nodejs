@@ -7,6 +7,9 @@ const cors = require('cors');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path');
+const passport = require('passport');
+require('./passport/bearer');
+const authRole = require('./passport/authRole');
 
 
 
@@ -31,7 +34,7 @@ app.get('/',(req, res)=>{
 
 
 // initialize routes
-app.use('/api',require('./routes/adminApi'));
+app.use('/api',require('./routes/authApi'));
 app.use('/api',require('./routes/customerApi'));
 app.use('/api',require('./routes/coursApi'));
 
