@@ -32,7 +32,7 @@ app.get('/',(req, res)=>{
      res.status(200).render('index')
 }); 
 
-app.get('/dashboard',authRole(["admin"]),(req,res)=>{
+app.get('/dashboard',passport.authenticate('bearer', { session: false }),authRole(["admin"]),(req,res)=>{
     res.send('Dashboard')
 })
 
