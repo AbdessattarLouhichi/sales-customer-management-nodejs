@@ -6,7 +6,7 @@ const authRole = require('../passport/authRole');
 
 // Post request Create cours
 
-router.post('/CreateCours',passport.authenticate('bearer', { session: false }),authRole(["admin"]),createCours)
+router.post('/CreateCours',passport.authenticate('bearer', { session: false }),authRole("admin"),createCours)
 
 
 // Get cours
